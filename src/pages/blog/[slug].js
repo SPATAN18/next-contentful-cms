@@ -5,7 +5,6 @@ import Image from "next/image";
 import renderHeroSection from "@/rich-text/hero-section";
 
 function Post({ post }) {
-  console.log(post.fields);
   const {
     fields: { title, description, hero },
   } = post;

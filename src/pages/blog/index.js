@@ -19,7 +19,6 @@ export async function getStaticProps() {
   const blogList = [];
   await contentfulClient.getEntries().then((entries) => {
     entries.items.forEach((item) => {
-      console.log(item);
       blogList.push({ title: item.fields.title, slug: item.fields.slug });
     });
   });

@@ -69,7 +69,6 @@ const renderNode = (node, key) => {
       );
     case "embedded-asset-block":
       const imageUrl = `https:${node.data.target.fields.file.url}`;
-      console.log("image", node.data);
       return (
         <Image
           key={key}
