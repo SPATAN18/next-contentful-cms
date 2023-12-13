@@ -5,33 +5,31 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          primary: "#ff00d4",
-
-          secondary: "#2e8f00",
-
-          accent: "#00beff",
-
-          neutral: "#2b272c",
-
-          "base-100": "#002c35",
-
-          info: "#0096ff",
-
-          success: "#6bb000",
-
-          warning: "#ff9800",
-
-          error: "#c40043",
+  theme: {
+    extend: {
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "white",
+          },
         },
       },
-    ],
-  },
-  theme: {
-    extend: {},
+      animation: {
+        typing: "typing 2s steps(13) infinite alternate, blink .7s infinite",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
